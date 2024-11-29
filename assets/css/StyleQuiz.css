@@ -142,3 +142,10 @@ body {
   font-size: 12px;
   font-style: italic;
 }
+
+#aviso {
+  color: red;
+  font-weight: bold;
+  display: none;
+  margin-top: 20px;
+}
