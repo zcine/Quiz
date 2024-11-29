@@ -1,0 +1,97 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+    background-color: rgb(46, 46, 46);
+  }
+  
+  .CartaoFinal {
+    margin: 25px;
+  }
+  
+  /*Divs da Tela Inicial*/
+  #TelaInicial {
+    border: 5px solid black;
+    margin-bottom: 50px;
+    background-image: url("/assets/img/Um fundo cinza e preto com um fundo preto e branco_ _ Foto Premium.jpg");
+    background-size: cover;
+  }
+  #FundoInicio{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 500px;
+    background-color: rgb(153, 0, 255, 0.5);
+  }
+  .CartaoAluno{
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
+  }
+  .CartaoAluno h1{
+    font-size: 20px;
+    
+  }
+  .CartaoAluno p{
+    font-size: 12px;
+  }
+  .FotoAluno{
+    display: grid; 
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    place-items: center; 
+    border: 1px solid black; 
+    margin: 25px 25px 0px 25px;
+  }
+  .SeiLaMano{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /*Divs de Centralização das Perguntas*/
+  #DivQuiz {
+    border: 3px solid black;
+    display: grid;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+  
+  #CentroDeCima {
+    display: flex;
+  }
+  
+  #CentroDoMeio {
+    display: flex;
+  }
+  
+  #CentroDeBaixo {
+    display: flex;
+  }
+  
+  /*Rodapé do Programa*/
+  #RodapeFinal {
+    background-color: rgb(153, 0, 255);
+    background-color: black 50%;
+    height: 200px;
+    margin: 15px;
+    display: grid;
+    border: 5px solid orange;
+    justify-content: center;
+    align-items: center;
+  }

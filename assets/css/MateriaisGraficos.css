@@ -1,0 +1,192 @@
+/*Cartões de Pergunta*/
+/*******************/
+/*font*/
+.CartaoFinal {
+    position: relative;
+    border-radius: 10px;
+    width: 275px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #5900ff;
+    box-shadow: 1px 1px 12px #5100d4;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+.CartaoFinalCover {
+    text-shadow: #5100d4 2px 2px 2px;
+    color: rgb(255, 255, 255);
+    top: 0;
+    position: absolute;
+    background-color: rgb(153, 0, 255);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.CartaoFinal:hover .CartaoFinalCover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+}
+
+.TituloPerguntaFinal {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+/*Botão Final*/
+/*******************/
+#BotaoResultado {
+    margin-left: 25px;
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 125px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+}
+
+.TituloBotao {
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+#BotaoResultado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+#BotaoResultado:hover {
+    color: #fff;
+}
+
+#BotaoResultado:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+/*Opções*/
+/*******************/
+.radio-buttons {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.radio-button :hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    position: relative;
+    margin-right: 10px;
+}
+
+.radio-circle::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked+.radio-circle::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-button:nth-of-type(1) input[type="radio"]:checked+.radio-circle::before {
+    background-color: red;
+}
+
+.radio-button:nth-of-type(2) input[type="radio"]:checked+.radio-circle::before {
+    background-color: cyan;
+}
+
+.radio-button:nth-of-type(3) input[type="radio"]:checked+.radio-circle::before {
+    background-color: green;
+}
+
+.radio-button:nth-of-type(4) input[type="radio"]:checked+.radio-circle::before {
+    background-color: yellow;
+}
+
+.radio-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.radio-button:hover .radio-circle {
+    border-color: #555;
+}
+
+.radio-button:hover input[type="radio"]:checked+.radio-circle::before {
+    background-color: #555;
+}
