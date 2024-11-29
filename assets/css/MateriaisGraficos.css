@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 /*Cartões de Pergunta*/
 /*******************/
 /*font*/
 .CartaoFinal {
     position: relative;
     border-radius: 10px;
-    width: 275px;
+    width: 450px;
     height: 300px;
     background-color: whitesmoke;
     -webkit-box-shadow: 1px 1px 12px #5900ff;
@@ -28,13 +29,12 @@
 
 .CartaoFinalCover {
     text-shadow: #5100d4 2px 2px 2px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     top: 0;
     position: absolute;
-    background-color: rgb(153, 0, 255);
+    background: radial-gradient(circle, #ae00ff, #7900b1);;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
     cursor: pointer;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -63,7 +63,8 @@
 }
 
 .TituloPerguntaFinal {
-    font-size: 20px;
+    font-family: "Indie Flower", cursive;
+    font-size: 36px;
     font-weight: bolder;
 }
 
@@ -95,7 +96,8 @@
     bottom: 0;
     right: 100%;
     left: 0;
-    background: rgb(20, 20, 20);
+    margin: 0;
+    background: rgb(82, 0, 107);
     opacity: 0;
     z-index: -1;
     transition: all 0.5s;

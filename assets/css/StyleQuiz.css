@@ -1,97 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to top, #000000, rgb(140, 0, 255));
+  justify-content: center;
+}
+
+.CartaoFinal {
+  margin: 25px;
+}
+
+#TituloQuiz{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 48px;
+}
+
+.PerguntaDoCartao {
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 25px;
+  font-weight: bold;
+}
+
+.radio-buttons {
+  text-align: start;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+/*Divs da Tela Inicial*/
+#TelaInicial {
+  margin-bottom: 50px;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background:
+  linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
+  url("../img/FundoBTS.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*Divs de Centralização das Perguntas*/
+#DivQuiz {
+  display: grid;  justify-content: center;
+  place-items: center;
+}
+
+#CentroDeBaixo, #CentroDoMeio, #CentroDeCima {
+  display: flex;
+}
+
+/*Rodapé do Programa*/
+#RodapeFinal {
+  display: flex;
+  color: white;
+  cursor: default;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate-border-colors {
+  0% {
+      border-color: purple;
   }
-  
-  body {
-    width: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f1f1f1;
-    padding: 20px;
-    background-color: rgb(46, 46, 46);
+  33% {
+      border-color: black;
   }
-  
-  .CartaoFinal {
-    margin: 25px;
+  66% {
+      border-color: darkblue;
   }
-  
-  /*Divs da Tela Inicial*/
-  #TelaInicial {
-    border: 5px solid black;
-    margin-bottom: 50px;
-    background-image: url("/assets/img/Um fundo cinza e preto com um fundo preto e branco_ _ Foto Premium.jpg");
-    background-size: cover;
+  100% {
+      border-color: purple;
   }
-  #FundoInicio{
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 500px;
-    background-color: rgb(153, 0, 255, 0.5);
-  }
-  .CartaoAluno{
-    width: 200px;
-    height: 300px;
-    border-radius: 30px;
-    background: #212121;
-    box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60);
-  }
-  .CartaoAluno h1{
-    font-size: 20px;
-    
-  }
-  .CartaoAluno p{
-    font-size: 12px;
-  }
-  .FotoAluno{
-    display: grid; 
-    height: 150px;
-    width: 150px;
-    background-size: cover;
-    place-items: center; 
-    border: 1px solid black; 
-    margin: 25px 25px 0px 25px;
-  }
-  .SeiLaMano{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    font-style: italic;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /*Divs de Centralização das Perguntas*/
-  #DivQuiz {
-    border: 3px solid black;
-    display: grid;
-    margin-bottom: 50px;
-    justify-content: center;
-  }
-  
-  #CentroDeCima {
-    display: flex;
-  }
-  
-  #CentroDoMeio {
-    display: flex;
-  }
-  
-  #CentroDeBaixo {
-    display: flex;
-  }
-  
-  /*Rodapé do Programa*/
-  #RodapeFinal {
-    background-color: rgb(153, 0, 255);
-    background-color: black 50%;
-    height: 200px;
-    margin: 15px;
-    display: grid;
-    border: 5px solid orange;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+.CartaoFinal {
+  width: 300px; /* Ajuste conforme necessário */
+  height: 300px; /* Ajuste conforme necessário */
+  border-radius: 100px;
+  border-width: 5px; /* Largura da borda */
+  border-style: solid;
+  border-color: purple; /* Inicial */
+  animation: rotate-border-colors 4s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #222; /* Fundo da div */
+}
+
+#PerfilAlunos{
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  cursor: default;
+}
+
+.CartaoAluno{
+  display: flex;
+  box-shadow: 2px 2px 2px black;
+  margin: 15px;
+  background-color: #222;
+  width: 300px;
+  height: 150px;
+  align-items: center;
+}
+
+.CartaoAluno img{
+  margin-left: 25px;
+  height: 100px;
+}
+
+.NomeAluno{
+  margin-left: 25px;
+  font-size: 12px;
+  font-style: italic;
+}
