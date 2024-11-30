@@ -3,6 +3,7 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 @keyframes rotate-border-colors {
   0% {
     border-color: purple;
@@ -21,7 +22,7 @@
   }
 }
 
-.NomeAluno{
+.NomeAluno {
   cursor: default;
 }
 
@@ -53,6 +54,7 @@
 
 /*Rodapé do Programa*/
 .RodapeFinal {
+  margin-top: 50px;
   display: flex;
   color: white;
   cursor: default;
@@ -66,6 +68,7 @@
   margin-left: 50px;
   margin-right: 25px;
 }
+
 @media (min-width: 1451px) {
   body {
     margin: 0;
@@ -114,18 +117,10 @@
     place-items: center;
   }
 
-  .CentroDeBaixo, .CentroDoMeio, .CentroDeCima {
+  .CentroDeBaixo,
+  .CentroDoMeio,
+  .CentroDeCima {
     display: flex;
-  }
-
-  /*Rodapé do Programa*/
-  .RodapeFinal {
-    display: flex;
-    color: white;
-    cursor: default;
-    height: 250px;
-    justify-content: center;
-    align-items: center;
   }
 
 
@@ -164,29 +159,41 @@
 }
 
 @media (max-width: 1450px) {
+  .RodapeFinal {
+    width: 113%;
+    text-align: center;
+  }
+  .RodapeFinal h1 {
+    margin-left: 50px;
+  }
+
+  .CartaoFinal {
+    margin: 25px;
+  }
+
   body {
     margin: 0;
     background: linear-gradient(to top, #000000, rgb(140, 0, 255));
   }
-
-  .CartaoFinal{
-    margin: 15px 0px;
+  .PerguntaDoCartao {
+    font-family: "Indie Flower", cursive;
+    font-size: 48px;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-weight: bold;
   }
 
   /*Divs da Tela Inicial*/
   .TelaInicial {
     margin-bottom: 50px;
     background-size: cover;
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
     color: white;
     text-shadow: 2px 2px 2px black;
     align-items: center;
     display: grid;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 110vw;
     background:
       linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
       url("../img/FundoBTS.jpg");
@@ -194,12 +201,16 @@
     background-position: center;
   }
 
-  .DivQuiz{
-    place-items: center ;
+  .DivQuiz {
+    width: 113%;
+    place-items: center;
     display: grid;
+    margin-bottom: 50px;
   }
-  
-  .CentroDeBaixo, .CentroDoMeio, .CentroDeCima {
+
+  .CentroDeBaixo,
+  .CentroDoMeio,
+  .CentroDeCima {
     justify-content: center;
     align-items: center;
     display: grid;
@@ -214,20 +225,20 @@
     display: flex;
     box-shadow: 2px 2px 2px black;
     margin: 15px;
-    width: 300px;
-    height: 150px;
+    width: 500px;
+    height: 200px;
     align-items: center;
     background-color: #222;
   }
 
   .CartaoAluno img {
     margin-left: 25px;
-    height: 100px;
+    height: 150px;
   }
 
   .NomeAluno {
     margin-left: 25px;
-    font-size: 12px;
+    font-size: 20px;
     font-style: italic;
   }
 }
