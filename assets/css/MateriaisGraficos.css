@@ -70,7 +70,7 @@
 
 /*Botão Final*/
 /*******************/
-#BotaoResultado {
+.BotaoResultado {
     margin-left: 25px;
     background: #fff;
     border: none;
@@ -89,7 +89,7 @@
     transform: skew(21deg);
 }
 
-#BotaoResultado::before {
+.BotaoResultado::before {
     content: '';
     position: absolute;
     top: 0;
@@ -103,11 +103,11 @@
     transition: all 0.5s;
 }
 
-#BotaoResultado:hover {
+.BotaoResultado:hover {
     color: #fff;
 }
 
-#BotaoResultado:hover::before {
+.BotaoResultado:hover::before {
     left: 0;
     right: 0;
     opacity: 1;

@@ -3,73 +3,51 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes rotate-border-colors {
+  0% {
+    border-color: purple;
+  }
 
-body {
-  display: grid;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: linear-gradient(to top, #000000, rgb(140, 0, 255));
-  justify-content: center;
+  33% {
+    border-color: black;
+  }
+
+  66% {
+    border-color: darkblue;
+  }
+
+  100% {
+    border-color: purple;
+  }
 }
 
 .CartaoFinal {
-  margin: 25px;
+  width: 300px;
+  height: 300px;
+  border-radius: 100px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: purple;
+  animation: rotate-border-colors 4s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #222;
+  /* Fundo da div */
 }
 
-#TituloQuiz{
+.TituloQuiz {
   text-transform: uppercase;
+  color: white;
   text-align: center;
   font-size: 48px;
 }
 
-.PerguntaDoCartao {
-  font-family: "Indie Flower", cursive;
-  font-size: 20px;
-  margin-left: 50px;
-  margin-right: 25px;
-  font-weight: bold;
-}
-
-.radio-buttons {
-  text-align: start;
-  margin-left: 50px;
-  margin-right: 25px;
-}
-
-/*Divs da Tela Inicial*/
-#TelaInicial {
-  margin-bottom: 50px;
-  background-size: cover;
-  box-sizing: border-box;
-  height: 100vh;
-  width: 100vw;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  align-items: center;
-  display: grid;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background:
-  linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
-  url("../img/FundoBTS.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-/*Divs de Centralização das Perguntas*/
-#DivQuiz {
-  display: grid;  justify-content: center;
-  place-items: center;
-}
-
-#CentroDeBaixo, #CentroDoMeio, #CentroDeCima {
-  display: flex;
-}
-
 /*Rodapé do Programa*/
-#RodapeFinal {
+.RodapeFinal {
   display: flex;
   color: white;
   cursor: default;
@@ -78,74 +56,173 @@ body {
   align-items: center;
 }
 
-@keyframes rotate-border-colors {
-  0% {
-      border-color: purple;
+@media (min-width: 769px) {
+
+  .CartaoFinal {
+    margin: 25px;
   }
-  33% {
-      border-color: black;
+
+
+  .PerguntaDoCartao {
+    font-family: "Indie Flower", cursive;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-weight: bold;
   }
-  66% {
-      border-color: darkblue;
+
+  .radio-buttons {
+    text-align: start;
+    margin-left: 50px;
+    margin-right: 25px;
   }
-  100% {
-      border-color: purple;
+
+  /*Divs da Tela Inicial*/
+  .TelaInicial {
+    margin-bottom: 50px;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background:
+      linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
+      url("../img/FundoBTS.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*Divs de Centralização das Perguntas*/
+  .DivQuiz {
+    display: grid;
+    justify-content: center;
+    place-items: center;
+  }
+
+  .CentroDeBaixo, .CentroDoMeio, .CentroDeCima {
+    display: flex;
+  }
+
+  /*Rodapé do Programa*/
+  .RodapeFinal {
+    display: flex;
+    color: white;
+    cursor: default;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .PerfilAlunos {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    cursor: default;
+  }
+
+  .CartaoAluno {
+    display: flex;
+    box-shadow: 2px 2px 2px black;
+    margin: 15px;
+    background-color: #222;
+    width: 300px;
+    height: 150px;
+    align-items: center;
+  }
+
+  .CartaoAluno img {
+    margin-left: 25px;
+    height: 100px;
+  }
+
+  .NomeAluno {
+    margin-left: 25px;
+    font-size: 12px;
+    font-style: italic;
   }
 }
 
-.CartaoFinal {
-  width: 300px; /* Ajuste conforme necessário */
-  height: 300px; /* Ajuste conforme necessário */
-  border-radius: 100px;
-  border-width: 5px; /* Largura da borda */
-  border-style: solid;
-  border-color: purple; /* Inicial */
-  animation: rotate-border-colors 4s linear infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: #222; /* Fundo da div */
-}
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    background: linear-gradient(to top, #000000, rgb(140, 0, 255));
+  }
 
-#PerfilAlunos{
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 20px;
-  display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  cursor: default;
-}
+  .CartaoFinal{
+    margin: 15px 0px;
+  }
 
-.CartaoAluno{
-  display: flex;
-  box-shadow: 2px 2px 2px black;
-  margin: 15px;
-  background-color: #222;
-  width: 300px;
-  height: 150px;
-  align-items: center;
-}
+  /*Divs da Tela Inicial*/
+  .TelaInicial {
+    margin-bottom: 50px;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background:
+      linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
+      url("../img/FundoBTS.jpg");
+    background-size: cover;
+    background-position: center;
+  }
 
-.CartaoAluno img{
-  margin-left: 25px;
-  height: 100px;
-}
+  .DivQuiz{
+    place-items: center ;
+    display: grid;
+  }
+  
+  .CentroDeBaixo, .CentroDoMeio, .CentroDeCima {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+  }
 
-.NomeAluno{
-  margin-left: 25px;
-  font-size: 12px;
-  font-style: italic;
-}
+  .PerfilAlunos {
+    display: flex;
+  }
 
-#aviso {
-  color: red;
-  font-weight: bold;
-  display: none;
-  margin-top: 20px;
+  .CartaoAluno {
+    color: white;
+    display: flex;
+    box-shadow: 2px 2px 2px black;
+    margin: 15px;
+    width: 300px;
+    height: 150px;
+    align-items: center;
+    background-color: #222;
+  }
+
+  .CartaoAluno img {
+    margin-left: 25px;
+    height: 100px;
+  }
+
+  .NomeAluno {
+    margin-left: 25px;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  .SeparadorAluno{
+    display: none;
+  }
 }
