@@ -129,7 +129,7 @@
 }
 
 .radio-button :hover {
-    color: orange;
+    color: rgb(0, 255, 255);
     text-decoration: underline;
 }
 

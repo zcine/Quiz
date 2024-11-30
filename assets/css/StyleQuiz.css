@@ -21,6 +21,10 @@
   }
 }
 
+.NomeAluno{
+  cursor: default;
+}
+
 .CartaoFinal {
   width: 300px;
   height: 300px;
@@ -44,6 +48,7 @@
   color: white;
   text-align: center;
   font-size: 48px;
+  cursor: default;
 }
 
 /*Rodapé do Programa*/
@@ -56,7 +61,12 @@
   align-items: center;
 }
 
-@media (min-width: 769px) {
+.radio-buttons {
+  text-align: start;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+@media (min-width: 1451px) {
   body {
     margin: 0;
     background: linear-gradient(to top, #000000, rgb(140, 0, 255));
@@ -75,11 +85,6 @@
     font-weight: bold;
   }
 
-  .radio-buttons {
-    text-align: start;
-    margin-left: 50px;
-    margin-right: 25px;
-  }
 
   /*Divs da Tela Inicial*/
   .TelaInicial {
@@ -158,7 +163,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1450px) {
   body {
     margin: 0;
     background: linear-gradient(to top, #000000, rgb(140, 0, 255));
