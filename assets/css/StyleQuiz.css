@@ -57,6 +57,10 @@
 }
 
 @media (min-width: 769px) {
+  body {
+    margin: 0;
+    background: linear-gradient(to top, #000000, rgb(140, 0, 255));
+  }
 
   .CartaoFinal {
     margin: 25px;
@@ -220,9 +224,5 @@
     margin-left: 25px;
     font-size: 12px;
     font-style: italic;
-  }
-
-  .SeparadorAluno{
-    display: none;
   }
 }
