@@ -160,7 +160,7 @@
 
 @media (max-width: 1450px) {
   .RodapeFinal {
-    width: 113%;
+    width: 100vw;
     text-align: center;
   }
   .RodapeFinal h1 {
@@ -172,6 +172,7 @@
   }
 
   body {
+    width: 100vw;
     margin: 0;
     background: linear-gradient(to top, #000000, rgb(140, 0, 255));
   }
@@ -193,7 +194,7 @@
     display: grid;
     justify-content: center;
     height: 100vh;
-    width: 200vw;
+    width: 100vw;
     background:
       linear-gradient(to top, #6300b3, rgba(0, 0, 0, 0.5)),
       url("../img/FundoBTS.jpg");
@@ -202,7 +203,7 @@
   }
 
   .DivQuiz {
-    width: 113%;
+    width: 100vw;
     place-items: center;
     display: grid;
     margin-bottom: 50px;
