@@ -19,12 +19,12 @@ body{
 @media (min-width: 737px) {
     .Resultado h1 {
         text-transform: uppercase;
-        font-size: 200%;
+        font-size: 300%;
         color: rgb(255, 78, 78);
     }
     
     .Resultado p {
-        font-size: 125%;
+        font-size: 150%;
         text-align: justify;
         padding: 0 10%;
     }
@@ -36,8 +36,8 @@ body{
         place-items: center;
         border: 10px solid rgb(76, 0, 255);
         border-radius: 10%;
-        width: 50vw;
-        height: 75vh;
+        width: 75vw;
+        height: 60vh;
     }
     
     .Imagem{
