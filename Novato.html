@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Result4</title>
+    <title>Novato</title>
     <link rel="stylesheet" href="assets/css/StyleResults.css">
+    <link rel="icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
 </head>
 <body>
-    <h1>Seu resultado é: Result4</h1>
-    <h1 id="votos"></h1>
-    <img src="" alt="">
+    <div class="Resultado">
+        <div class="CartaoResult">
+            <h1 style="color: rgb(190, 114, 0);">Novato</h1>
+            <div class="Imagem">
+                <img src="assets/img/baixados (1).jpeg" alt="FotoEntusiasta">
+            </div>
+            <h1 id="votos"></h1>
+            <p id="DescricaoResult">Você está começando sua jornada no mundo dos doramas. Explore títulos famosos e descubra o encanto desse universo cheio de emoções.
+            </p>
+        </div>
+    </div>
     <script>
         //obtendo item do localStorage -qnt de votos
-        let contResult4 = localStorage.getItem('Result4');
+        let contResult3 = localStorage.getItem('Acertos');
         //Mostrando item em um h1
-        document.querySelector('#votos').innerHTML = 'Votos: ' + contResult4;
+        document.querySelector('#votos').innerHTML = contResult3 + ' Acertos!';
     </script>
 </body>
 </html>

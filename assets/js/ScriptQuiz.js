@@ -1,33 +1,37 @@
-function advinhar() {
-    let contAcertou = 0;
+function advinhar () {
+    const perguntas = document.querySelectorAll('.CartaoFinal');
 
-    let OpcoesQuestoes = document.querySelectorAll('input[type="radio"]');
+    for (const pergunta of perguntas) {
+        const respostas = pergunta.querySelectorAll('input[type="radio"]');
+        const Selecionou = Array.from(respostas).some(radio => radio.checked);
 
-    OpcoesQuestoes.forEach(e => {
-        if (e.checked) {
-            if (e.value == 'Acertou') {
-                contAcertou++;
-            }
+        if (!Selecionou) {
+            alert('Por favor, responda todas as perguntas antes de continuar.');
+            return;
+        }
+    }
+
+    let acertos = 0;
+    perguntas.forEach(pergunta => {
+        const respostaCorreta = pergunta.querySelector('input[type="radio"][value="Acertou"]');
+        if (respostaCorreta && respostaCorreta.checked) {
+            acertos++;
         }
     });
 
-    let pagina;
-    if (contAcertou == 10) {
-        pagina = 'ViciadoemDoramas';
-        //Se acertou 10
-    } else if (contAcertou > 6) {
-        pagina = 'Especialista';
-        //Se acertou 7, 8, 9
-    } else if (contAcertou > 3) {
-        pagina = 'Entusiasta';
-        //Se acertou 4, 5, 6
-    } else {
-        pagina = 'Novato';
-        //Se acertou 0, 1, 2, 3
+    let pagina = '';
+    if (acertos <= 3) {
+        pagina = 'Novato.html';
+    } else if (acertos <= 6) {
+        pagina = 'Entusiasta.html';
+    } else if (acertos <= 9) {
+        pagina = 'Especialista.html';
+    } else if (acertos === 10) {
+        pagina = 'Viciado.html';
     }
-
-    localStorage.setItem('Acertos', contAcertou);
+    localStorage.setItem('Acertos',acertos);
+    alert(`Redirecionando...`);
     setTimeout(() => {
-        window.open(pagina + '.html', '_self');
+        window.open(pagina);
     }, 5000);
-}
+};
